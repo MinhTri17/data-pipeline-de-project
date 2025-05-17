@@ -1,0 +1,174 @@
+id,title,selftext,score,num_comments,author,created_utc,url,upvote_ratio,over_18,edited,spoiler,stickied
+1h551vm,What's it like to be rich?,,699,47,OneSixteenthRobot,2024-12-02 20:36:20,https://i.redd.it/6fxilvkjxh4e1.jpeg,0,False,False,False,False
+1h516m6,Airflow has a hidden Easter egg: the SmoothOperator,,330,13,massxacc,2024-12-02 17:59:48,https://i.redd.it/i7t5od2l5h4e1.png,1,False,False,False,False
+1h5e7p9,Is it okay to have days where you dont have anything to do?,"I dont mean to come off as super workaholic or something but is it okay or normal to have days where you don't do anything at all? I am a fairly new DE assigned to a project. There are days where I just wait on the next thing that we need to do, and theres just nothing to do other than upskilling and reading. Is this normal? I still get paid tho so I dont really mind. Thanks in advance!",65,33,Spirited-Ad-9162,2024-12-03 03:33:12,https://www.reddit.com/r/dataengineering/comments/1h5e7p9/is_it_okay_to_have_days_where_you_dont_have/,0,False,False,False,False
+1h5c1fd,We are rebuilding a new Dataware House and we will orchestrate with Dagster,"Hey, data architect here, learning on the job, because we lack resources to hire new people.
+
+Today I discovered Dagster. Im exited, but what is the trap here??
+
+Its free (if we manage our infras), loads of features, DAG, assets, tests, checks, resources management, can integrate dbt (we have old timers in our team that only knows SQL)
+
+Thats pretty much sexy
+
+Are you guys using it? 
+Can I have some testimonial ? 
+What are the pros and cons ? 
+What techstack you using (storage, infras management, monitoring)?or",34,15,fixmyanxiety,2024-12-03 01:42:20,https://www.reddit.com/r/dataengineering/comments/1h5c1fd/we_are_rebuilding_a_new_dataware_house_and_we/,0,False,False,False,False
+1h5ju1i,Is there a website like tryhackme.com for data engineering?,"Is there an interactive website where you can learn data engineering skills that offers a live experience in a controlled environment? Like maybe learning APIs, Etl, azure  synapse, snowflake etc from a virtual box where you don't have to pay the costs yourself?
+
+There are plenty of websites that offer this service for other CS skills like tryhackme.com or the hackbox for cyber security, datacamp for data science etc",27,5,OddFirefighter3,2024-12-03 09:42:16,https://www.reddit.com/r/dataengineering/comments/1h5ju1i/is_there_a_website_like_tryhackmecom_for_data/,1,False,False,False,False
+1h5dlmg,Under hood technology for Data Engineers,"I am young data engineer and I am interested in learning basics of all data engineering technology suggest me where to start and what are the under hood technology I go for.
+
+Example : To learn PySpark I need to understand distributed computing first similarly what are the under hood technologies for other services like 
+
+1. Data Warehouse.
+2. Airflow.
+3. Streaming Data.
+4. Kafka.
+5. Iceberg.
+
+
+Looking forward to other suggestions too.
+
+",14,9,khushal20,2024-12-03 03:01:03,https://www.reddit.com/r/dataengineering/comments/1h5dlmg/under_hood_technology_for_data_engineers/,0,False,False,False,False
+1h5prn8,most efficient way to pull 3.5 million json files from AWS bucket and serialize to parquet file,"I have a huge dataset of \~3.5 million JSON files stored on an S3 bucket.  The goal is to do some text analysis, token counts, plot histograms, etc.  
+Problem is the size of the dataset.  It's about 87GB:
+
+\`aws s3 ls s3://my\_s3\_bucket/my\_bucket\_prefix/ --recursive --human-readable --summarize | grep ""Total Size""\`
+
+>Total Size: 87.2 GiB
+
+It's obviously inefficient to have to re-download all 3.5 million files each time we want to perform some analysis on it.  So the goal is to download all of them *once* and serialize to a data format (I'm thinking to a \`.parquet\` file using gzip or snappy compression).
+
+Once I've loaded all the json files, I'll join them into a Pandas df, and then (crucially, imo) will need to save as parquet somewhere, mainly avoid re-pulling from s3.
+
+Problem is it's taking *hours* to pull all these files from S3 in Sagemaker and eventually the Sagemaker notebook just crashes.  So I'm asking for recommendations on:  
+1.  How to speed up this data fetching and saving to parquet.
+
+2.  If I have any blind-spots that I'm missing egregiously that I haven't considered but should be considering to achieve this.
+
+Since this is an I/O bound task, my plan is to fetch the files in parallel using \`concurrent.futures.ThreadPoolExecutor\` to speed up the fetching process.
+
+I'm currently using a \`ml.r6i.2xlarge\` Sagemaker instance, which has 8 vCPUs.  But I plan to run this on a \`ml.c7i.12xlarge\` instance with 48 vCPUs.  I expect that should speed up the fetching process by setting the \`max\_workers\` argument to the 48 vCPUs.
+
+Once I have saved the data to parquet, I plan to use Spark or Dask or Polars to do the analysis if Pandas isn't able to handle the large data size.
+
+Appreciate the help and advice.  Thank you.",11,27,johnonymousdenim,2024-12-03 15:18:39,https://www.reddit.com/r/dataengineering/comments/1h5prn8/most_efficient_way_to_pull_35_million_json_files/,1,False,False,False,False
+1h5mrbq,A good DevOps/CloudOps course/workshop for busy DEs?,"Hey folks!
+
+I'm a self taught DE of 5+ years of exp, and I've reached a point where I find myself limited by the usual ""serverless"" technologies that I often use for work. I'd like to expand my horizons and be more flexible in the options I know, to deploy stuff.
+
+Currently I'm following [this workshop on ECS](https://catalog.us-east-1.prod.workshops.aws/workshops/8c9036a7-7564-434c-b558-3588754e21f5/en-US) but it's mostly ""click here, click there, done"" type of workshop. DevOps is not my forte, so I'd like some more explanatory content, that makes me understand what I'm doing.
+
+As in the title, do you have specific recommendations for a nice workshop / video playlist / course, that can make me at least nail the foundations of this stuff? 
+
+I'm not aiming to build the new Discord, but at least being able to reliably self-host <insert generic DE tool> in prod, that would be a good start.
+
+Cheers!",6,1,wtfzambo,2024-12-03 12:55:32,https://www.reddit.com/r/dataengineering/comments/1h5mrbq/a_good_devopscloudops_courseworkshop_for_busy_des/,0,False,False,False,False
+1h5nr7b,Azure Data Engineering - sharing tips,"Hey, Any useful tips or experiences you would like to share?",7,11,Astherol,2024-12-03 13:47:20,https://www.reddit.com/r/dataengineering/comments/1h5nr7b/azure_data_engineering_sharing_tips/,0,False,False,False,False
+1h5hb0n,Fraud detection data pipeline (ETL) on GCP,"# [How to create a scalable fraud detection steaming data pipeline](https://medium.com/@rasvihostings/fraud-detection-data-pipeline-etl-on-gcp-2b15b8f3d65b)
+
+When we think about large volume streaming data pipeline three things come to our mind
+
+* **Scalability and resilience**
+* **Cost**
+* **Infrastructure maintenance**
+
+I designed a solution which can scale easily, use much as possible GCP managed services and finally reducing the cloud cost 😉
+
+[https://medium.com/@rasvihostings/fraud-detection-data-pipeline-etl-on-gcp-2b15b8f3d65b](https://medium.com/@rasvihostings/fraud-detection-data-pipeline-etl-on-gcp-2b15b8f3d65b)",3,0,rasvi786,2024-12-03 06:34:36,https://www.reddit.com/r/dataengineering/comments/1h5hb0n/fraud_detection_data_pipeline_etl_on_gcp/,0,False,False,False,False
+1h5q5he,Question about streaming processing,"I have only done ETL batch processing in my life. Say I have a DB2 table that I would like to stream into Snowflake, how do I set everything up? Is Snowpipe a feature that requires additional cost and subscription? ",3,0,highlifeed,2024-12-03 15:34:58,https://www.reddit.com/r/dataengineering/comments/1h5q5he/question_about_streaming_processing/,1,False,False,False,False
+1h5q3tg,Exploring Vector Search in Analytical Data: Insights and Experiences?,"Hello everyone! I'm curious if any of you are currently exploring **vector search** techniques specifically for **analytical data**. With the recent advancements in platforms like **Snowflake** and **Amazon Redshift**, which are integrating vector search capabilities, I'm interested in hearing your thoughts and experiences.
+
+* Have you implemented vector search in your analytical projects?
+* What challenges have you encountered during implementation?
+* Which vector databases or tools are you utilising (e.g., FAISS, Pinecone, Qdrant)?
+* How do you think vector search will enhance your analytical capabilities moving forward?",3,0,Technical-Pack-5613,2024-12-03 15:33:00,https://www.reddit.com/r/dataengineering/comments/1h5q3tg/exploring_vector_search_in_analytical_data/,1,False,False,False,False
+1h5lyro,Databricks Lakehouse vs Traditional Data Warehouse for Multi-Region Gaming Analytics – What’s the best approach?,,2,0,Secret_Walk6385,2024-12-03 12:09:10,https://i.redd.it/uklhc38xjm4e1.png,0,False,False,False,False
+1h5ews9,Internal Web App Databases - How to do local testing,"Hey! We have an internal web app with a sqlalchemy, alembic, and fastapi setup. I am trying to work on a way to do local testing of the changes to the database layer. Changes such as new tables, new columns, changing constraints, etc...
+
+I would like a workflow where I can test those changes on a database that is the same schema as production. Then I can verify how the data looks coming through the API before committing the changes to the database. Currently, we have 3 different servers with dev, uat, prod in the cloud.
+
+My current idea to implement a solution is to create a docker-compose file that starts up a local database, leverage pd\_dump to dump the schema of the prod database and then apply that to the local database. Then the developer can run the new incremental changes on the local database.
+
+  
+What are some strategies that you are currently using to solve this problem?",3,0,Culpgrant21,2024-12-03 04:10:46,https://www.reddit.com/r/dataengineering/comments/1h5ews9/internal_web_app_databases_how_to_do_local_testing/,1,False,False,False,False
+1h5dc3c,How do y'all's production systems query ETL outputs?,"We use Apache Flink for ETL (imagine aggregating event counts by user for use in risk decisioning systems) at my workplace. We currently publish this data to Kafka then sink it to Postgres.
+
+Curious if y'all have suggestions on how clients should connect to Postgres and learn about what features are available? Wonder if y'all go with a library approach (library consisting of a list of available features), GraphQL, or some metadata in the Postgres table describing the features?",3,0,JackWillsIt,2024-12-03 02:47:22,https://www.reddit.com/r/dataengineering/comments/1h5dc3c/how_do_yalls_production_systems_query_etl_outputs/,0,False,False,False,False
+1h5qd36,Calendar Dimension ,"Hi, I have to create a dim\_calendar table for data mart with key, date, month, year, and quarter.   
+There are two ways to do this: do a preload for the next x-years or insert a new date row every day (I only need yesterday’s date).
+
+I understand this dim table won't take up so much space if I load it for 10 or 50 years. The question for me is that someone has to remember/see that there are no more dates in dim\_calendar and add the next x years.
+
+If I have a script running, I know I always have the date I need. ",2,4,Dry-Response-1862,2024-12-03 15:44:04,https://www.reddit.com/r/dataengineering/comments/1h5qd36/calendar_dimension/,1,False,False,False,False
+1h5pafm,Leetcode similar for data engineering,"As subject says, do we have something like leetcode for data engineering? ",2,3,ExplorerDNA,2024-12-03 14:58:45,https://www.reddit.com/r/dataengineering/comments/1h5pafm/leetcode_similar_for_data_engineering/,0,False,False,False,False
+1h5m1zs,AWS or GCP DE certification in India? ,"Hi, I’m planning to write GCP certification in hopes of getting a job. I’m trying other things as well - like projects and so on. But I’m spending a lot of money on GCP. Is it worth it in terms of employment or should I do AWS? 
+
+Thank you. ",2,4,Impossible-Alarm-738,2024-12-03 12:14:44,https://www.reddit.com/r/dataengineering/comments/1h5m1zs/aws_or_gcp_de_certification_in_india/,0,False,False,False,False
+1h5l9rj,Is it possible to manually drop groups when using Spark Structured Streaming?,"I am trying to build a streaming pipeline on Spark, which would have complicated sessions, being closed on a specific event.
+
+It is advised to not use windows in this case and fallback to manual state management in flatMapGroupsWithState, so I would be able to manually remove or set a TTL for the state, when I am going to be sure that I won't need it anymore:
+
+[https://www.databricks.com/blog/2021/10/12/native-support-of-session-window-in-spark-structured-streaming.html](https://www.databricks.com/blog/2021/10/12/native-support-of-session-window-in-spark-structured-streaming.html)
+
+>You may still want to leverage flatMapGroupsWithState when your business use case requires a complicated session window, for example, if the case session should also be closed on a specific type of event regardless of inactivity.
+
+But there is also an implicit state in form of all values for the group:
+
+[https://github.com/apache/spark/blob/branch-3.5/sql/api/src/main/scala/org/apache/spark/sql/streaming/GroupState.scala#L42](https://github.com/apache/spark/blob/branch-3.5/sql/api/src/main/scala/org/apache/spark/sql/streaming/GroupState.scala#L42)
+
+Is there any way to remove this state as well or will it still build up unboundedly?",2,0,External-Drag-3815,2024-12-03 11:25:08,https://www.reddit.com/r/dataengineering/comments/1h5l9rj/is_it_possible_to_manually_drop_groups_when_using/,0,False,False,False,False
+1h585zj,Help to decide! Intern in UNICEF or private company.,"I'm in a dilemma: UNICEF is offering a data analytics internship, while a private company is offering a data engineering internship.
+
+Both positions are paid.
+
+UNICEF's stipend is 10 times higher than the private company's, which pays only a third of what UNICEF offers.
+
+The twist is that a full-time position at UNICEF after the internship is uncertain, whereas the private company is highly likely to offer a full-time position.
+
+I'm struggling to decide between Analytics and engineering. What should I choose?
+
+Is UNICEF good for cv, and for personal growth , technical growth?
+
+UNICEF works in Geographical data, wherAs private company works in US healthcare data.
+
+Goal is to become expert in data. Whether it is analytics, engineering, or data science. 
+
+What should I go for ? 
+",2,4,PublicStructure5904,2024-12-02 22:44:49,https://www.reddit.com/r/dataengineering/comments/1h585zj/help_to_decide_intern_in_unicef_or_private_company/,0,False,False,False,False
+1h5s3uu,Row and column level data lineage in medallion architecture,"How would you recommend to implement row and  column level lineage in a medallion architecture? 
+
+We are using MS Fabric. We have over 60k tables in parquet format within bronze lakehouse. They will then have to be deduplicated and consolidated into cca 10k delta format tables in silver lakehouse. Lastly, we will have cca 500 tables in a warehouse artifact for the golden layer. 
+
+We are using notebooks for bronze and silver layer and then using stored procedures for the golden layer.
+
+The largest tables have more than 1 billion rows. We thought of creating guid columns, but I assume this would take up a lot of space and would also be computationally expensive. 
+
+For auditing purposes and better data observability we have to implement a data trail, but are not sure on the best way to do so. Any recommendations are more than welcome.",1,0,merrpip77,2024-12-03 16:58:29,https://www.reddit.com/r/dataengineering/comments/1h5s3uu/row_and_column_level_data_lineage_in_medallion/,1,False,False,False,False
+1h5rldf,Data science at hackathons supporting integration and open data for digital resilience,,1,0,rhazn,2024-12-03 16:36:47,https://www.heltweg.org/posts/meta-data-2-oleg-lavrovsky-hacking-integration/,0,False,False,False,False
+1h5pd9k,DBT - Client Request.,"Hello all, I work for a company that has implemented a DBT based solution  solve one of pipeline issues... pretty standard fairs. 
+
+Our legacy system involves storing models (sql code) in firestore and calling these through parameterized schedulers and customized self built orchestrators.
+
+Now the powers that be have requested that we keep our DBT solution for orchestration but instead of storing the SQL for the Models and the Seeds on the GIT REPO, they would like to instead store the code and seeds on firestore and retrieve them during the DBT execution. 
+
+There arguments are that it would reduce build costs as the container would only need to be rebuilt when infra changes are made. This also means smaller changes can be made more easily as the whole team can push to production firestore, where as only the lead can push to the production branch on git. 
+
+Can anyone see any benefit or upside to this solution because I am really struggling here?",1,1,tcfcfc,2024-12-03 15:01:35,https://www.reddit.com/r/dataengineering/comments/1h5pd9k/dbt_client_request/,0,False,False,False,False
+1h52e3z,"How to Get Free Automotive data on honda civic models sold in 2015, with make,model,price and mileage","i am trying to compile a dataset for all honda civic models of 2015, make,model,price,MSRP, and mileages they were sold in the year 2015, for me to be  able to see , how  the prices were sold different back in the day and by  different states, but getting historical data is hard I have checked everywhere. does anyone have any clues or ideas?
+
+ possibly in csv? or json? or API. and I can parse them my self, pleas and thank you.
+
+please help reddit users.",1,7,Independent_Ad_9759,2024-12-02 18:48:02,https://www.reddit.com/r/dataengineering/comments/1h52e3z/how_to_get_free_automotive_data_on_honda_civic/,0,False,False,False,False
+1h526mh,ETL(Abinitio) to DE role,"
+Hi Folks, I'm looking for some career guidance. I've been working as an ETL/Abinitio developer for 6-7 years, and I'm feeling somewhat stagnated in my current role. The traditional ETL landscape looks kind of boring. I want to move into a more comprehensive data engineering position. What skills and technologies would you recommend? Specifically, I'm interested in understanding which cloud platforms,big data technologies would be most valuable for expanding my career opportunities. I'd appreciate insights on the learning paths, new tech stacks to learn.
+",1,1,shadowkop,2024-12-02 18:39:35,https://www.reddit.com/r/dataengineering/comments/1h526mh/etlabinitio_to_de_role/,0,False,False,False,False
+1h51bi8,Necessity of docker,"Hi, I  am working on my phD in real time forecasting. Previously , i have worked with tools like airflow and mlflow.My question  i, If it is beneficial to install all of data eng. Tools & MLops tool from docker or not since my code script will run in VM/ Ubuntu server? Will I be overcomplicating it or separation of concern is required here? ",1,2,johnharrister,2024-12-02 18:05:09,https://www.reddit.com/r/dataengineering/comments/1h51bi8/necessity_of_docker/,0,False,False,False,False
+1h50v97,DROP TABLE in Databricks ,"So I have been trying to search the Web for answers to this seemingly simple question in vain, and GenAI simply makes stuff up.. 
+
+Is it not possible to manage who can DROP TABLE in Unity Catalog? 
+You can set permissions on SELECT, MODIFY but quriously not DROP TABLE.
+
+If it is indeed not possible to restrict DROP TABLE permissions, how do you prevent read only users from deleting all your stuff? 
+",0,11,Hinkakan,2024-12-02 17:47:18,https://www.reddit.com/r/dataengineering/comments/1h50v97/drop_table_in_databricks/,0,False,False,False,False
