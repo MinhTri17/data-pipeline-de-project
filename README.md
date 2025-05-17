@@ -13,15 +13,22 @@ This project builds a data pipeline with Apache Airflow to orchestrate data extr
 - Utilize Amazon Redshift to load transformed data for analytics
   
 # Project Architecture
+![System Architecture Diagram](img/system_architecture_diagram.png)
 
-# Tech stack
+- **Apache Airflow, Celery, PostgreSQL:** orchestrates the pipelines and manages Airflow's metadata 
+- **AWS S3:** stores raw and transformed data
+- **AWS Glue:** executes ETL jobs and populates data catalog
+- **AWS Athena:** allows SQL querying on data stored in AWS S3
+- **AWS Redshift:** serves as the data warehouse
+  
+# Tech Stack
 - **Workflow Orchestration & Management:** Apache Airflow, Celery, PostgreSQL
 - **Data Storage:** AWS S3
 - **Data Processing:** AWS Glue
 - **Data Warehouse:** AWS Redshift
 - **Language:** Python
   
-# Reference tutorial
-This project is based on the following tutorial: [Reddit Data Pipeline Engineering | AWS End to End Data Engineering](https://www.youtube.com/watch?v=LSlt6iVI_9Y)
+# Reference Tutorial
+- This project is based on the following tutorial: [Reddit Data Pipeline Engineering | AWS End to End Data Engineering](https://www.youtube.com/watch?v=LSlt6iVI_9Y)
 
 - The implementation and explanation in this repository reflect my own learning
